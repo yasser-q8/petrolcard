@@ -108,6 +108,17 @@
 }
 
 /* التبويب العادي */
+/* خلفية التبويبات - أزرق فاتح (أفتح من الحالي) */
+.tabs {
+    display: flex;
+    background-color: #1E88E5; /* أزرق فاتح */
+    border-radius: var(--border-radius);
+    margin-bottom: 30px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+/* التبويب العادي - أزرق مع نص أبيض */
 .tab {
     flex: 1;
     padding: 15px;
@@ -117,21 +128,26 @@
     transition: all 0.3s ease;
     border-bottom: 3px solid transparent;
     color: white;
-    background-color: transparent;
+    background-color: #1976D2; /* أزرق متوسط */
 }
 
-/* التبويب النشط - برتقالي غامق مع نص أبيض */
+/* التبويب النشط - نفس درجة البرتقالي في التطبيق مع نص أبيض */
 .tab.active {
-    background-color: #FF6E00; /* برتقالي قوي */
-    border-bottom: 3px solid #FF9800;
+    background-color: #FF9800; /* نفس البرتقالي المستخدم في التطبيق */
+    border-bottom: 3px solid #F57C00;
     color: white;
     font-weight: bold;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
-/* تأثير التحويم */
+/* تأثير التحويم على التبويب العادي */
 .tab:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #2196F3; /* أزرق أفتح عند التحويم */
+    color: white;
+}
+
+/* تأثير التحويم على التبويب النشط */
+.tab.active:hover {
+    background-color: #FF9800; /* يبقى نفس اللون */
     color: white;
 }
 
