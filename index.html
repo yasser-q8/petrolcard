@@ -97,9 +97,10 @@
         }
 
         /* تغيير خلفية التبويبات إلى أزرق غامق */
+/* خلفية التبويبات - أزرق غامق */
 .tabs {
     display: flex;
-    background-color: #0d47a1; /* أزرق غامق */
+    background-color: #0d47a1;
     border-radius: var(--border-radius);
     margin-bottom: 30px;
     overflow: hidden;
@@ -115,20 +116,28 @@
     font-weight: 600;
     transition: all 0.3s ease;
     border-bottom: 3px solid transparent;
-    color: white; /* نص أبيض على الخلفية الزرقاء */
+    color: white;
+    background-color: transparent;
 }
 
-/* التبويب النشط - برتقالي غامق */
+/* التبويب النشط - برتقالي غامق مع نص أبيض */
 .tab.active {
-    background-color: #e65100; /* برتقالي غامق */
-    border-bottom: 3px solid #ff9800;
+    background-color: #FF6E00; /* برتقالي قوي */
+    border-bottom: 3px solid #FF9800;
     color: white;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 /* تأثير التحويم */
 .tab:hover {
-    background-color: #1565c0; /* أزرق أفتح عند التحويم */
+    background-color: rgba(255, 255, 255, 0.1);
     color: white;
+}
+
+/* تأثير التحويم على التبويب النشط */
+.tab.active:hover {
+    background-color: #E65100; /* برتقالي أغمق عند التحويم */
 }
         .tab.active {
             background-color: rgba(255, 152, 0, 0.1);
