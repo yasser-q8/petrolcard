@@ -96,31 +96,40 @@
             border: 2px solid var(--accent-blue);
         }
 
-        .tabs {
-            display: flex;
-            background-color: var(--dark-blue);
-            border-radius: var(--border-radius);
-            margin-bottom: 30px;
-            overflow: hidden;
-            box-shadow: var(--box-shadow);
-        }
+        /* تغيير خلفية التبويبات إلى أزرق غامق */
+.tabs {
+    display: flex;
+    background-color: #0d47a1; /* أزرق غامق */
+    border-radius: var(--border-radius);
+    margin-bottom: 30px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
 
-        .tab {
-            flex: 1;
-            padding: 15px;
-            text-align: center;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border-bottom: 3px solid transparent;
-            color: #555;
-        }
+/* التبويب العادي */
+.tab {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+    color: white; /* نص أبيض على الخلفية الزرقاء */
+}
 
-        .tab:hover {
-            background-color: rgba(255, 152, 0, 0.1);
-            color: var(--primary-color);
-        }
+/* التبويب النشط - برتقالي غامق */
+.tab.active {
+    background-color: #e65100; /* برتقالي غامق */
+    border-bottom: 3px solid #ff9800;
+    color: white;
+}
 
+/* تأثير التحويم */
+.tab:hover {
+    background-color: #1565c0; /* أزرق أفتح عند التحويم */
+    color: white;
+}
         .tab.active {
             background-color: rgba(255, 152, 0, 0.1);
             border-bottom: 3px solid var(--primary-color);
