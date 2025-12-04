@@ -98,27 +98,17 @@
 
         /* تغيير خلفية التبويبات إلى أزرق غامق */
 /* خلفية التبويبات - أزرق غامق */
+/* خلفية التبويبات - تبقى زرقاء */
 .tabs {
     display: flex;
-    background-color: #0d47a1;
+    background-color: #0d47a1; /* لون أزرق غامق */
     border-radius: var(--border-radius);
     margin-bottom: 30px;
     overflow: hidden;
     box-shadow: var(--box-shadow);
 }
 
-/* التبويب العادي */
-/* خلفية التبويبات - أزرق فاتح (أفتح من الحالي) */
-.tabs {
-    display: flex;
-    background-color: #1E88E5; /* أزرق فاتح */
-    border-radius: var(--border-radius);
-    margin-bottom: 30px;
-    overflow: hidden;
-    box-shadow: var(--box-shadow);
-}
-
-/* التبويب العادي - أزرق مع نص أبيض */
+/* كل التبويبات لونها أزرق ونصها أبيض */
 .tab {
     flex: 1;
     padding: 15px;
@@ -127,30 +117,29 @@
     font-weight: 600;
     transition: all 0.3s ease;
     border-bottom: 3px solid transparent;
-    color: white;
-    background-color: #1976D2; /* أزرق متوسط */
+    color: white; /* الكتابة بيضاء */
+    background-color: #0d47a1; /* نفس اللون الأزرق */
 }
 
-/* التبويب النشط - نفس درجة البرتقالي في التطبيق مع نص أبيض */
+/* عندما يكون التبويب نشط - يتحول لبرتقالي */
 .tab.active {
-    background-color: #FF9800; /* نفس البرتقالي المستخدم في التطبيق */
+    background-color: #FF9800; /* نفس برتقالي التطبيق */
     border-bottom: 3px solid #F57C00;
-    color: white;
+    color: white; /* الكتابة تبقى بيضاء */
     font-weight: bold;
 }
 
-/* تأثير التحويم على التبويب العادي */
-.tab:hover {
-    background-color: #2196F3; /* أزرق أفتح عند التحويم */
+/* تأثير التحويم على التبويب العادي (الأزرق) */
+.tab:hover:not(.active) {
+    background-color: #1565C0; /* أزرق أفتح قليلاً */
     color: white;
 }
 
-/* تأثير التحويم على التبويب النشط */
+/* تأثير التحويم على التبويب النشط (البرتقالي) */
 .tab.active:hover {
-    background-color: #FF9800; /* يبقى نفس اللون */
+    background-color: #F57C00; /* برتقالي أغمق قليلاً */
     color: white;
-}
-        .tab.active {
+}        .tab.active {
             background-color: rgba(255, 152, 0, 0.1);
             border-bottom: 3px solid var(--primary-color);
             color: var(--primary-color);
